@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches - Sierra Football Agency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Matches</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="players.html">Players</a>
+        <a href="matches.html">Matches</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<input type="text" id="matchSearch" placeholder="Search Fixtures..." onkeyup="searchFixtures()">
+
+<div class="fixtures">
+    <p>Slifa vs East End Lions — Dec 10</p>
+    <p>Bo Rangers vs Freetown City Fc — Dec 15</p>
+    <p>Kallon FC vs Ports Authority — Dec 18</p>
+    <p>Mighty Blackpool vs Diamond stars - Dec 19</p>
+    <p>Wilberforce Strikers vs Luawa Fc - Dec 20</p>
+    <p>Kamboi Eagles vs Bhantal Fc - Dec 20</p>
+    <p>Old Edwardians vs Star Sports Academy - Dec 20</p>
+    <p>Bullom Stars vs Abacha City - Dec 21</p>
+    <p>Bai Burreh Warriors vs Wusum Stars - 21</p>
+    <p>Mogbwemo Queens FC vs Vem Buck Fc - Dec 21</p>
+    <p>FC Kallon Female vs Rising Queens FC - Dec 22</p>
+    <p>Mena Queens vs Ascentonians FC - Dec 22</p>
+    <p>Patricia Umu FC vs Malema Queens FC - Dec 22</p>
+</div>
+
+<script>
+function searchFixtures() {
+    let input = document.getElementById("matchSearch").value.toLowerCase();
+    let items = document.querySelectorAll(".fixtures p");
+
+    items.forEach(item => {
+        item.style.display = item.innerText.toLowerCase().includes(input) ? "" : "none";
+    });
+}
+</script>
+</main>
+
+<footer>
+    <p>&copy; 2025 Sierra Football Agency. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+
+</body>
+</html>
