@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players - Sierra Football Agency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Players</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="players.html">Players</a>
+        <a href="matches.html">Matches</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<input type="text" id="playerSearch" placeholder="Search Players..." onkeyup="searchPlayers()">
+
+<div class="players-container">
+
+    <div class="player-card">
+        <img src="musa tombo.jpg" alt="Musa Tombo">
+        <h3>Musa Noah Kamara</h3>
+        <p>Position: Striker</p>
+        <p>Age: 25</p>
+        <p>Current Club: Free Agent</p>
+    </div>
+
+    <div class="player-card">
+        <img src="lampard.jpg" alt="Mamud Fofanah">
+        <h3>Mamud Fofanah</h3>
+        <p>Position: Midfielder</p>
+        <p>Age: 28</p>
+        <p>Current Club: Free Agent</p>
+    </div>
+
+    <div class="player-card">
+        <img src="dauda.jpg" alt="Dauda Kamara">
+        <h3>Dauda Kamara</h3>
+        <p>Position: Goalkeeper</p>
+        <p>Age: 18</p>
+        <p>Current Club: East Lions</p>
+    </div>
+
+    <div class="player-card">
+        <img src="ak.jpg" alt="Augustus Kargbo">
+        <h3>Augustus Kargbo</h3>
+        <p>Position: Forward</p>
+        <P>Age: 26</P>
+        <p>Current Club: Black Burn Rovers</p>
+    </div>
+
+    <div class="player-card">
+        <img src="wurie.jpg" alt="Mamadu Wurie Jalloh">
+        <h3>Mamadu Wurie Jalloh</h3>
+        <p>Position: Goalkeeper</p>
+        <p>Age: 18</p>
+        <p>Current Club: Bromby IF</p>
+    </div>
+    
+    <div class="player-card">
+        <img src="juma.jpg" alt="Abdulai Juma Bah">
+        <h3>Abdulai Juma Bah</h3>
+        <p>Position: Defender</p>
+        <p>Age: 19</p>
+        <p>Current Club: FC Nice</p>
+    </div>
+
+    <div class="player-card">
+        <img src="kzb.jpg" alt="Kumba Zainab Brima">
+        <h3>Kumba Zainab Brima</h3>
+        <p>Position: Striker</p>
+        <p>Age: 21</p>
+        <p>Current Club: Riga FC</p>
+    </div>
+
+    <div class="player-card">
+        <img src="rgk.jpg" alt="Rashida Gas Kamara">
+        <h3>Rashida Gas Kamara</h3>
+        <p>Position: Defender</p>
+        <p>Age: 24</p>
+        <p>Current Club: Determine Girls Fc</p>
+    </div>
+
+    <div class="player-card">
+        <img src="mika.jpg" alt="Momoh Ibrahim Kamara">
+        <h3>Momoh Ibrahim Kamara</h3>
+        <p>Position: Midfielder</p>
+        <p>Age: 20</p>
+        <p>Current Club: Mineosta United</p>
+    </div>
+
+</div>
+
+<script>
+function searchPlayers() {
+    let input = document.getElementById("playerSearch").value.toLowerCase();
+    let cards = document.getElementsByClassName("player-card");
+
+    for (let i = 0; i < cards.length; i++) {
+        let name = cards[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+        cards[i].style.display = name.includes(input) ? "" : "none";
+    }
+}
+</script>
+</main>
+
+<footer>
+    <p>&copy; 2025 Sierra Football Agency. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+</body>
+</html>
